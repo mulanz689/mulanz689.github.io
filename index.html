@@ -30,24 +30,27 @@
     <section class="hero wrap">
       <div class="hero-copy">
         <p class="eyebrow">UC San Diego · Cognitive Science · Machine Learning and Neural Computation · Computer Science minor</p>
-        <h1>I study how AI systems represent, preserve, and act on structure, rules, and constraints.</h1>
+        <h1>I study why AI systems fail to follow rules—even when the rules are represented or available.</h1>
         <p class="lede">
-          My work sits in AI safety research, mechanistic interpretability, and agent reliability:
-          what information a model actually represents internally, where constraints are lost or
-          never reach a component able to enforce them, and how careful measurement can separate
-          competing explanations for failure.
+          My research combines mechanistic experiments with system-level audits to understand
+          where rules fail: inside language models, or before constraints reach the components
+          responsible for acting on them.
         </p>
         <div class="hero-links">
           <a class="button primary" href="#work">Selected research</a>
           <a class="button" href="mailto:muzhou@ucsd.edu">Email</a>
         </div>
       </div>
-      <aside class="focus-card" aria-label="Research focus">
-        <span class="mini-label">Current direction</span>
+      <aside class="focus-card" aria-label="Best Paper Award">
+        <span class="mini-label">Best Paper Award · IEEE CIFEr 2026</span>
         <p>
-          Moving from documenting model failures toward experimentally rigorous methods
-          that distinguish interpretation, implementation, and system-level constraint loss.
+          IDV: Customer-Context-Aware Multi-Engine Architecture for AI-Agent Intent
+          Drift Detection in Finance.
         </p>
+        <div class="inline-links">
+          <a href="https://doi.org/10.1109/CIFER67845.2026.11692374" target="_blank" rel="noopener noreferrer">Paper ↗</a> ·
+          <a href="assets/idv-cifer-2026-slides.pdf" target="_blank" rel="noopener noreferrer">Conference slides ↗</a>
+        </div>
       </aside>
     </section>
 
@@ -55,11 +58,6 @@
       <div class="section-heading">
         <p class="eyebrow">Research interests</p>
         <h2>Questions I care about</h2>
-        <p class="section-intro">
-          I am broadly interested in making AI behavior scientifically measurable:
-          isolating where failures arise, testing competing explanations, and identifying
-          when those failures can be anticipated or prevented.
-        </p>
       </div>
 
       <div class="research-grid">
@@ -89,14 +87,6 @@
             final accuracy?
           </p>
         </article>
-        <article class="card">
-          <span class="number">04</span>
-          <h3>Prediction & pre-action verification</h3>
-          <p>
-            When stable predictive structure exists, can compact model-specific
-            measurements anticipate implementation failures before generation or execution?
-          </p>
-        </article>
       </div>
     </section>
 
@@ -105,11 +95,6 @@
         <div class="section-heading">
           <p class="eyebrow">Selected research</p>
           <h2>A connected research trajectory</h2>
-          <p class="section-intro">
-            I approach AI reliability at several levels—from what information a model
-            represents internally, to whether a constraint remains available inside an agent
-            system, to whether those measurements can distinguish and anticipate failure modes.
-          </p>
         </div>
 
         <div class="project-list">
@@ -137,7 +122,9 @@
               <p>
                 Studies ambiguity and drift in financial agent workflows and develops an
                 independent multi-engine architecture for evaluating whether agent execution
-                remains consistent with an authorized intent specification.
+                remains consistent with an authorized intent specification. On the 850
+                author-injected traces of the IDV-1000 benchmark the architecture reaches
+                93.9% F1.
               </p>
               <p class="tags">agent reliability · financial AI · intent drift · runtime evaluation</p>
             </div>
@@ -149,8 +136,11 @@
               <h3>Constraint Availability and Enforceability</h3>
               <p>
                 Investigates a systems-level failure mode in which a policy constraint may
-                exist upstream yet fail to reach any component capable of enforcing it.
-                This work separates constraint availability from downstream model compliance.
+                exist upstream yet fail to reach any component capable of enforcing it. In the
+                audited stack, 33 of 88 bundled skills were truncated at a 10,000-code-point
+                limit, and one documented trading-use restriction was lost before it reached
+                the model. These are findings about whether a constraint was structurally
+                available, not about how the agent subsequently behaved.
               </p>
               <p class="tags">agent architecture · constraint propagation · system reliability · auditability</p>
             </div>
@@ -199,10 +189,82 @@
       </p>
     </section>
 
+
+    <section id="experience" class="section section-alt">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Selected experience</p>
+          <h2>Building systems alongside studying them</h2>
+        </div>
+
+        <div class="experience-list">
+          <article class="experience-item">
+            <div>
+              <p class="role">Research &amp; Development, ML</p>
+              <h3>Instinctive Network</h3>
+            </div>
+            <div class="experience-copy">
+              <p class="date">2025 — Present</p>
+              <p>
+                Research and development focused on AI agent reliability. I work on structured
+                authorization checkpoints and intent-drift evaluations for multi-step agent
+                workflows, along with replay-based tests for constraints that are dropped,
+                truncated, or unavailable at execution boundaries.
+              </p>
+              <p>
+                I also develop reproducible test fixtures and failure records to distinguish
+                verified constraint delivery from downstream agent compliance.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div>
+              <p class="role">Esports Manager</p>
+              <h3>UC San Diego Esports</h3>
+            </div>
+            <div class="experience-copy">
+              <p class="date">2026 — Present</p>
+              <p>
+                Coaching and managing a competitive Marvel Rivals roster, advising 30+ players and
+                running weekly scrimmages and game reviews.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div>
+              <p class="role">Developer</p>
+              <h3>Gamegenie &amp; Noobled Studios · Roblox</h3>
+            </div>
+            <div class="experience-copy">
+              <p class="date">2024 — 2025</p>
+              <p>
+                Developed two games with 1.7M+ combined visits and contributed to projects with
+                5M+ total visits, programming server-side systems in Lua, working with engagement
+                data, and contributing to 3D environment and visual design.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section wrap education-layout">
+      <div class="section-heading">
+        <p class="eyebrow">Education</p>
+        <h2>University of California, San Diego</h2>
+      </div>
+      <div class="education-copy">
+        <h3>B.S. Cognitive Science · in progress</h3>
+        <p>Machine Learning and Neural Computation specialization · Minor in Computer Science</p>
+      </div>
+    </section>
+
     <section class="section section-alt">
       <div class="wrap">
         <div class="section-heading">
-          <p class="eyebrow">Applied ML</p>
+          <p class="eyebrow">Other projects</p>
           <h2>Socio-Economic Data Modeling: Oregon Measure 110</h2>
           <p class="section-intro">
             An applied data-modeling project using Python, Pandas, and scikit-learn on more than
@@ -214,81 +276,6 @@
           <div><strong>130k+</strong><span>records</span></div>
           <div><strong>Python</strong><span>data pipeline</span></div>
           <div><strong>Geo EDA</strong><span>ZIP-level analysis</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="section wrap">
-      <div class="section-heading">
-        <p class="eyebrow">Selected experience</p>
-        <h2>Building systems alongside studying them</h2>
-      </div>
-
-      <div class="experience-list">
-        <article class="experience-item">
-          <div>
-            <p class="role">Research &amp; Development, ML</p>
-            <h3>Instinctive Network</h3>
-          </div>
-          <div class="experience-copy">
-            <p class="date">2025 — Present</p>
-            <p>
-              Research and development focused on AI agent reliability. I work on structured
-              authorization checkpoints and intent-drift evaluations for multi-step agent
-              workflows, along with replay-based tests for constraints that are dropped,
-              truncated, or unavailable at execution boundaries.
-            </p>
-            <p>
-              I also develop reproducible test fixtures and failure records to distinguish
-              verified constraint delivery from downstream agent compliance.
-            </p>
-          </div>
-        </article>
-
-        <article class="experience-item">
-          <div>
-            <p class="role">Esports Manager</p>
-            <h3>UC San Diego Esports</h3>
-          </div>
-          <div class="experience-copy">
-            <p class="date">2026 — Present</p>
-            <p>
-              Coaching and managing a competitive Marvel Rivals roster, advising 30+ players and
-              running weekly scrimmages and game reviews.
-            </p>
-          </div>
-        </article>
-
-        <article class="experience-item">
-          <div>
-            <p class="role">Developer</p>
-            <h3>Gamegenie &amp; Noobled Studios · Roblox</h3>
-          </div>
-          <div class="experience-copy">
-            <p class="date">2024 — 2025</p>
-            <p>
-              Developed two games with 1.7M+ combined visits and contributed to projects with
-              5M+ total visits, programming server-side systems in Lua, working with engagement
-              data, and contributing to 3D environment and visual design.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="education" class="section section-alt">
-      <div class="wrap education-layout">
-        <div class="section-heading">
-          <p class="eyebrow">Education</p>
-          <h2>University of California, San Diego</h2>
-        </div>
-        <div class="education-copy">
-          <h3>B.S. Cognitive Science · in progress</h3>
-          <p>Machine Learning and Neural Computation specialization · Minor in Computer Science</p>
-          <p class="muted">
-            My interests sit at the intersection of language-model behavior, AI-agent
-            reliability, experimental measurement, and mechanistic understanding.
-          </p>
         </div>
       </div>
     </section>

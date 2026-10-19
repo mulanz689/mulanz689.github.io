@@ -60,6 +60,7 @@ h1 {
 .section-intro { max-width:720px; color:var(--muted); font-size:18px; }
 
 .research-grid { display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid var(--line); border-left:1px solid var(--line); }
+.research-grid .card:last-child:nth-child(odd) { grid-column:1 / -1; }
 .card { padding:34px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); min-height:255px; background:rgba(255,255,255,.3); }
 .number { color:var(--accent); font-size:12px; font-weight:750; letter-spacing:.1em; }
 .card h3 { margin:34px 0 10px; font-size:20px; line-height:1.3; }
