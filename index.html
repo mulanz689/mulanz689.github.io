@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mulan Zhou — AI safety research, mechanistic interpretability, and agent reliability. UC San Diego Cognitive Science with a specialization in Machine Learning and Neural Computation.">
+  <meta property="og:title" content="Mulan Zhou">
+  <meta property="og:description" content="AI safety research, mechanistic interpretability, and agent reliability.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mulanz689.github.io/">
+  <title>Mulan Zhou</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="name" href="#top">Mulan Zhou</a>
+      <nav aria-label="Primary navigation">
+        <a href="#research">Research</a>
+        <a href="#work">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="blog.html">Blog</a>
+        <a href="#experience">Experience</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">UC San Diego · Cognitive Science · Machine Learning and Neural Computation · Computer Science minor</p>
+        <h1>I study how AI systems represent, preserve, and act on structure, rules, and constraints.</h1>
+        <p class="lede">
+          My work sits in AI safety research, mechanistic interpretability, and agent reliability:
+          what information a model actually represents internally, where constraints are lost or
+          never reach a component able to enforce them, and how careful measurement can separate
+          competing explanations for failure.
+        </p>
+        <div class="hero-links">
+          <a class="button primary" href="#work">Selected research</a>
+          <a class="button" href="mailto:muzhou@ucsd.edu">Email</a>
+        </div>
+      </div>
+      <aside class="focus-card" aria-label="Research focus">
+        <span class="mini-label">Current direction</span>
+        <p>
+          Moving from documenting model failures toward experimentally rigorous methods
+          that distinguish interpretation, implementation, and system-level constraint loss.
+        </p>
+      </aside>
+    </section>
+
+    <section id="research" class="section wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Research interests</p>
+        <h2>Questions I care about</h2>
+        <p class="section-intro">
+          I am broadly interested in making AI behavior scientifically measurable:
+          isolating where failures arise, testing competing explanations, and identifying
+          when those failures can be anticipated or prevented.
+        </p>
+      </div>
+
+      <div class="research-grid">
+        <article class="card">
+          <span class="number">01</span>
+          <h3>Model behavior & structured generalization</h3>
+          <p>
+            When models receive new rules or exceptions, what determines whether they
+            correctly bind those changes to the relevant parts of a structured task?
+          </p>
+        </article>
+        <article class="card">
+          <span class="number">02</span>
+          <h3>Reliable AI agents & constraint preservation</h3>
+          <p>
+            How do scope rules, permissions, and human intent propagate through an
+            agent stack, and what happens when the information needed for enforcement
+            disappears before an action is taken?
+          </p>
+        </article>
+        <article class="card">
+          <span class="number">03</span>
+          <h3>Measurement & mechanistic understanding</h3>
+          <p>
+            Can controlled behavioral and representation-level measurements distinguish
+            competing explanations for model failure rather than merely correlate with
+            final accuracy?
+          </p>
+        </article>
+        <article class="card">
+          <span class="number">04</span>
+          <h3>Prediction & pre-action verification</h3>
+          <p>
+            When stable predictive structure exists, can compact model-specific
+            measurements anticipate implementation failures before generation or execution?
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="work" class="section section-alt">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Selected research</p>
+          <h2>A connected research trajectory</h2>
+          <p class="section-intro">
+            I approach AI reliability at several levels—from what information a model
+            represents internally, to whether a constraint remains available inside an agent
+            system, to whether those measurements can distinguish and anticipate failure modes.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="project">
+            <div class="project-meta">Mechanistic interpretability</div>
+            <div>
+              <h3>Selective Rule Updating &amp; Mechanistic Evaluation</h3>
+              <p>
+                Preregistered experiments on Qwen2.5-Instruct (1.5B and 14B) asking whether a
+                model's handling of selectively updated rules can be traced to an identifiable
+                internal mechanism. Residual-stream probes show that rule applicability is
+                highly decodable from hidden states; controlled activation interventions,
+                however, changed an internal readout without changing the model's final
+                answers. The work therefore reports decodability and stops short of claiming a
+                dominant causal mechanism.
+              </p>
+              <p class="tags">mechanistic interpretability · selective rule updating · residual-stream probes · activation interventions · decodability vs. causal control</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-meta">AI agents · finance</div>
+            <div>
+              <h3>Intent Drift Detection in Financial AI Agents</h3>
+              <p>
+                Studies ambiguity and drift in financial agent workflows and develops an
+                independent multi-engine architecture for evaluating whether agent execution
+                remains consistent with an authorized intent specification.
+              </p>
+              <p class="tags">agent reliability · financial AI · intent drift · runtime evaluation</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-meta">Agent systems</div>
+            <div>
+              <h3>Constraint Availability and Enforceability</h3>
+              <p>
+                Investigates a systems-level failure mode in which a policy constraint may
+                exist upstream yet fail to reach any component capable of enforcing it.
+                This work separates constraint availability from downstream model compliance.
+              </p>
+              <p class="tags">agent architecture · constraint propagation · system reliability · auditability</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="section wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Publications & presentations</p>
+        <h2>Selected research outputs</h2>
+      </div>
+
+      <div class="pub-list">
+        <article class="pub">
+          <div class="pub-year">2026</div>
+          <div>
+            <h3>IDV: Customer-Context-Aware Multi-Engine Architecture for AI-Agent Intent Drift Detection in Finance</h3>
+            <p><strong>Mulan Zhou</strong>, Yan Xue</p>
+            <p>2026 IEEE Symposium on Computational Intelligence for Financial Engineering and Economics (CIFEr), pp. 340–344 · Long presentation</p>
+            <p><strong>Best Paper Award</strong></p>
+            <div class="inline-links">
+              <a href="https://doi.org/10.1109/CIFER67845.2026.11692374" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pub">
+          <div class="pub-year">2026</div>
+          <div>
+            <h3>When No Enforceable Locus Exists: Availability and Representability in a Financial AI Agent Stack</h3>
+            <p><strong>Mulan Zhou</strong>, Yan Xue</p>
+            <p>ACM International Conference on AI in Finance (ICAIF 2026) · Accepted — Main Conference</p>
+            <p class="muted">
+              Constraint propagation, materialization loss, and enforcement boundaries in agent systems.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <p class="note">
+        I use conservative status labels for ongoing work and update them only when the corresponding status is public.
+      </p>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Applied ML</p>
+          <h2>Socio-Economic Data Modeling: Oregon Measure 110</h2>
+          <p class="section-intro">
+            An applied data-modeling project using Python, Pandas, and scikit-learn on more than
+            130,000 records, including data cleaning, feature transformation, scaling, and geospatial
+            exploratory analysis across temporal shifts.
+          </p>
+        </div>
+        <div class="metric-row">
+          <div><strong>130k+</strong><span>records</span></div>
+          <div><strong>Python</strong><span>data pipeline</span></div>
+          <div><strong>Geo EDA</strong><span>ZIP-level analysis</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Selected experience</p>
+        <h2>Building systems alongside studying them</h2>
+      </div>
+
+      <div class="experience-list">
+        <article class="experience-item">
+          <div>
+            <p class="role">Undergraduate Researcher</p>
+            <h3><a href="https://cclab.ucsd.edu/" target="_blank" rel="noopener noreferrer">Comparative Cognition Lab</a> · UC San Diego</h3>
+          </div>
+          <div class="experience-copy">
+            <p class="date">2026 — Present</p>
+            <p>
+              Recently joined the lab, which is led by Federico Rossano, working primarily with
+              graduate student Jack Terwilliger.
+            </p>
+          </div>
+        </article>
+
+        <article class="experience-item">
+          <div>
+            <p class="role">Co-founder · AI Research &amp; Product Development</p>
+            <h3>Instinctive Network</h3>
+          </div>
+          <div class="experience-copy">
+            <p class="date">January 2025 — Present</p>
+            <p>
+              Research and product work on Intent Checkpoint and ConstraintFlow, two systems in
+              development that aim to make an AI agent's authorized intent and its operative
+              constraints explicit and checkable before an action is taken. They are evaluation
+              and verification tools, not a guarantee that an agent will comply.
+            </p>
+          </div>
+        </article>
+
+        <article class="experience-item">
+          <div>
+            <p class="role">Team Manager &amp; Coach · Marvel Rivals</p>
+            <h3>UC San Diego Esports</h3>
+          </div>
+          <div class="experience-copy">
+            <p class="date">2026 — Present</p>
+            <p>
+              Coaching and managing a competitive Marvel Rivals roster, advising 30+ players and
+              running weekly scrimmages and game reviews.
+            </p>
+          </div>
+        </article>
+
+        <article class="experience-item">
+          <div>
+            <p class="role">Developer</p>
+            <h3>Gamegenie &amp; Noobled Studios · Roblox</h3>
+          </div>
+          <div class="experience-copy">
+            <p class="date">2024 — 2025</p>
+            <p>
+              Developed two games with 1.7M+ combined visits and contributed to projects with
+              5M+ total visits, programming server-side systems in Lua, working with engagement
+              data, and contributing to 3D environment and visual design.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="section section-alt">
+      <div class="wrap education-layout">
+        <div class="section-heading">
+          <p class="eyebrow">Education</p>
+          <h2>University of California, San Diego</h2>
+        </div>
+        <div class="education-copy">
+          <h3>B.S. Cognitive Science · in progress</h3>
+          <p>Machine Learning and Neural Computation specialization · Minor in Computer Science</p>
+          <p class="muted">
+            My interests sit at the intersection of language-model behavior, AI-agent
+            reliability, experimental measurement, and mechanistic understanding.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Research approach</p>
+        <h2>I care about experiments that can be wrong.</h2>
+      </div>
+      <div class="two-col">
+        <p>
+          I am especially drawn to problems where a surprising model behavior can be
+          turned into a controlled experiment: isolate the relevant variable, construct
+          competing explanations, and design a test that can falsify the preferred one.
+        </p>
+        <p>
+          Building real systems has also made me interested in failures that arise between
+          components—not only inside a model—and in preserving the distinction between
+          capability, information availability, and execution.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="wrap contact-inner">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Interested in similar questions?</h2>
+          <p>
+            I’m interested in conversations about model behavior, AI-agent reliability,
+            interpretability, and rigorous evaluation.
+          </p>
+          <a class="email-link" href="mailto:muzhou@ucsd.edu">muzhou@ucsd.edu</a>
+        </div>
+        <div class="contact-links">
+          <a href="https://github.com/mulanz689" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/mulan-z-286122303/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span id="year"></span> Mulan Zhou</span>
+      <span>Hosted with GitHub Pages.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

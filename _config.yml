@@ -1,0 +1,7 @@
+title: Mulan Zhou
+description: Research notes on language models, AI agents, interpretability, and experimental methods.
+url: "https://mulanz689.github.io"
+baseurl: ""
+permalink: /blog/:year/:month/:day/:title/
+markdown: kramdown
+future: true

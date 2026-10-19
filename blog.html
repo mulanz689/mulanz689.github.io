@@ -1,0 +1,61 @@
+---
+layout: null
+title: Blog
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Short research notes and reading reflections by Mulan Zhou.">
+  <title>Blog · Mulan Zhou</title>
+  <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="name" href="{{ '/' | relative_url }}">Mulan Zhou</a>
+      <nav aria-label="Primary navigation">
+        <a href="{{ '/' | relative_url }}#research">Research</a>
+        <a href="{{ '/' | relative_url }}#work">Projects</a>
+        <a href="{{ '/' | relative_url }}#publications">Publications</a>
+        <a class="active-nav" href="{{ '/blog.html' | relative_url }}">Blog</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="blog-hero wrap">
+      <p class="eyebrow">Research notes</p>
+      <h1>Ideas, papers, and questions I’m thinking about.</h1>
+      <p class="lede blog-lede">Short-form writing on language models, AI agents, interpretability, experimental methods, and papers that change how I think about these problems.</p>
+    </section>
+    <section class="blog-index wrap">
+      {% if site.posts.size > 0 %}
+      <div class="post-list">
+        {% for post in site.posts %}
+        <article class="post-row">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+          <div>
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            {% if post.description %}<p>{{ post.description }}</p>{% else %}<p>{{ post.excerpt | strip_html | truncatewords: 28 }}</p>{% endif %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="empty-blog">
+        <h2>First note coming soon.</h2>
+        <p>New posts will automatically appear here in reverse chronological order.</p>
+      </div>
+      {% endif %}
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span id="year"></span> Mulan Zhou</span>
+      <span>Hosted with GitHub Pages.</span>
+    </div>
+  </footer>
+  <script src="{{ '/script.js' | relative_url }}"></script>
+</body>
+</html>
